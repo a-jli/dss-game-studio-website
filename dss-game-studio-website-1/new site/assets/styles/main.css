@@ -1,0 +1,321 @@
+* {
+    box-sizing: border-box;
+}
+
+/* ////////VARIABLES FOR COLORS//////// */
+:root {
+  --color-black: rgb(29, 28, 28); 
+  --color-grey: rgb(85, 84, 84);
+  --color-light-grey: rgb(220, 220, 220);
+  --color-white: rgb(255, 255, 255); 
+  --color-red: rgb(207, 54, 54); 
+  --color-hover-red: rgb(235, 74, 74); 
+  --color-border: rgba(216, 114, 114, 0.43);
+  --color-border-shadow: rgba(216, 160, 160, 0.31);
+  --color-hover-border: rgb(216, 114, 114);
+  --color-hover-border-shadow: rgba(216, 160, 160, 0.51);
+}
+
+/* ////////NAV//////// */
+nav {
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--color-black);
+    padding: 1rem 0 0 0;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    a {
+    text-decoration: none;
+    }
+    a:visited {
+        color: var(--color-white);
+}
+}
+
+.nav-item {
+    background-color: var(--color-black);
+    padding: 1rem;
+    width: 100%;
+    color:var(--color-white);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: bkground-color 0.3s;
+}
+
+.nav-item:hover {
+    background-color: var(--color-light-grey);;
+    color: var(--color-black);
+}
+
+#current {
+    background-color: var(--color-red);
+    color:var(--color-white);
+}
+#current:hover {
+    background-color: var(--color-hover-red);
+}
+
+/* ////////GENERAL/MISC/LINKS//////// */
+
+.container {
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 1.5rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem 1rem 2rem 1rem;
+    a {
+        text-decoration: none;
+        color: var(--color-red);
+    }
+
+    a:visited {
+        color: var(--color-red);
+    }
+}
+
+.game-link {
+    text-decoration: none;
+    color: var(--color-black);
+}
+.game-link:visited {
+    color: var(--color-black);
+}
+.game-card:hover {
+    border: 1.5px solid var(--color-hover-border);
+    box-shadow: 2px 2px 4px var(--color-hover-border-shadow);
+}
+
+
+.main-heading {
+    margin: 1rem 0 1rem 0;
+}
+
+.main-image {
+    width: 80%;
+}
+
+/* ////////GAME AND NEWS PAGES//////// */
+.news-game-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1rem;
+    flex: 0 1 auto;
+    width: 80%;
+    max-width: 85ch;
+}
+.game-card, .news-card {
+    margin-top: 1.5rem;
+    text-align: left;
+    border: 1.5px solid var(--color-border);
+    box-shadow: 1px 1px 4px var(--color-border-shadow);
+    padding: 1rem;
+    transition: box-shadow 0.1s;
+    transition-timing-function: ease-in;
+}
+
+.game-sub-heading, .news-sub-heading {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.game-status {
+    margin: 0;
+    font-size: 0.9rem;
+    color:var(--color-grey);
+    font-style: italic;
+}
+
+.game-about, .news-about {
+    font-size: 0.9rem;
+}
+
+.about-game-wrapper {
+    width: 100%;
+}
+
+.game-video {
+    width: 100%;
+}
+
+.game-image {
+    height: 100%;
+    width: 100%;
+}
+
+.assets-images-wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-bottom: 1rem;
+     img {
+        width: 25cqw;
+        max-width: 30%;
+     }
+}
+
+.news-image {
+    width: 90%;
+    max-height: 14rem;
+    object-fit: cover;
+}
+
+.buttons-wrapper { /* for the play and survey buttons */
+    display: flex;
+    gap: 2rem;
+}
+
+
+/* ////////ABOUT//////// */
+.team-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+    padding: 0 1rem 0 1rem;
+}
+.team-member {
+    background-color: var(--color-light-grey);;
+    font-size: 1rem;
+    padding: 1rem;
+    width: 38cqw;
+}
+.team-member-text {
+    margin: 0;
+}
+.team-member-role {
+    font-size: 0.8rem;
+    color: var(--color-grey);
+    margin: 0;
+}
+.team-image {
+    width: 80%;
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.light-text {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: var(--color-hover-border);
+    font-size: 0.8rem;
+}
+
+/* ////////BUTTONS//////// */
+
+button {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+     border: none;
+     padding: 0.5rem 1rem 0.5rem 1rem;
+     background-color:var(--color-grey);
+     color:var(--color-white);
+     transition: background-color 0.3s;
+     font-size: 1rem;
+     border-radius: 2px;
+}
+
+button:hover{
+    background-color:var(--color-light-grey);
+    cursor: pointer;
+}
+
+.back-button {
+     margin: 1rem;
+     padding: 0.5rem 1rem 0.5rem 1rem;
+     background-color:var(--color-grey);
+     color:var(--color-white);;
+}
+
+.link-button {
+    font-size: 0.8rem;
+    padding: 1rem 1.5rem 1rem 1.5rem;
+    background-color: var(--color-red);
+}
+.link-button:hover {
+    background-color: var(--color-hover-red);
+}
+
+.text-heavy-page { /* This class makes text left-aligned, I put it on pages with more text to make it easier to read.*/
+    align-self: center;
+    max-width: 80ch;
+    gap: 1rem;
+    text-align: left;
+    p {
+        font-size: 1rem;
+        align-self: start;
+    }
+}
+
+/* ////////MEDIA QUERIES FOR RESIZING//////// */
+@media screen and (min-width: 700px) {
+    .main-image {
+        width: 60%;
+    }
+    .team-grid {
+        gap: 1rem;
+        padding: 0 2rem 0 2rem;
+    }
+    .team-member {
+        background-color: var(--color-light-grey);;
+        font-size: 1rem;
+        padding: 1rem;
+        width: 25cqw;
+    }
+    .game-card {
+        max-width: 85ch;
+    }
+    .news-game-wrapper {
+        width: 70%;
+    }
+
+    .link-button {
+        font-size: 1rem;
+    }
+
+}
+
+@media screen and (min-width: 1280px) {
+    .main-image {
+        width: 40%;
+    }
+    nav {
+        padding: 0px;
+        justify-content: flex-start;
+    }
+    .nav-item {
+        width: 5.5rem;
+        padding: 1rem 0.6rem 1rem 0.6rem;
+    }
+    .news-game-wrapper {
+        width: 60%;
+        max-width: 65ch;
+        gap: 0rem;
+    }
+    .link-button {
+        font-size: 1.5rem;
+    }
+}
+
+@media screen and (min-width: 1920px) {
+    body {
+        font-size: 120%;
+    }
+    .nav-item {
+        width: 7rem;
+        padding: 1rem 0.6rem 1rem 0.6rem;
+    }
+    .link-button {
+        font-size: 1.6rem;
+    }
+}
