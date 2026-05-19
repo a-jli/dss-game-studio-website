@@ -2,28 +2,40 @@
     box-sizing: border-box;
 }
 
+/* ////////VARIABLES FOR COLORS//////// */
+:root {
+  --color-black: rgb(29, 28, 28); 
+  --color-grey: rgb(85, 84, 84);
+  --color-light-grey: rgb(220, 220, 220);
+  --color-white: rgb(255, 255, 255); 
+  --color-red: rgb(207, 54, 54); 
+  --color-hover-red: rgb(235, 74, 74); 
+  --color-border: rgba(216, 114, 114, 0.43);
+  --color-border-shadow: rgba(216, 160, 160, 0.31);
+  --color-hover-border: rgb(216, 114, 114);
+  --color-hover-border-shadow: rgba(216, 160, 160, 0.51);
+}
 
-
-
+/* ////////NAV//////// */
 nav {
     display: flex;
     justify-content: space-between;
-    background-color: #1d1c1c;
+    background-color: var(--color-black);
     padding: 1rem 0 0 0;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     a {
     text-decoration: none;
     }
     a:visited {
-        color: white;
-    }
+        color: var(--color-white);
+}
 }
 
 .nav-item {
-    background-color: #1d1c1c;
+    background-color: var(--color-black);
     padding: 1rem;
     width: 100%;
-    color:white;
+    color:var(--color-white);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -31,17 +43,19 @@ nav {
 }
 
 .nav-item:hover {
-    background-color: #d6d6d6;
-    color: black;
+    background-color: var(--color-light-grey);;
+    color: var(--color-black);
 }
 
 #current {
-    background-color: #cf3636;
-    color:white;
+    background-color: var(--color-red);
+    color:var(--color-white);
 }
 #current:hover {
-    background-color: #eb3e3e;
+    background-color: var(--color-hover-red);
 }
+
+/* ////////GENERAL/MISC/LINKS//////// */
 
 .container {
     display: flex;
@@ -59,24 +73,24 @@ main {
     padding: 1rem 1rem 2rem 1rem;
     a {
         text-decoration: none;
-        color: #cf3636;
+        color: var(--color-red);
     }
 
     a:visited {
-        color: #cf3636;
+        color: var(--color-red);
     }
 }
 
 .game-link {
     text-decoration: none;
-    color: #000000;
+    color: var(--color-black);
 }
 .game-link:visited {
-    color: #000000;
+    color: var(--color-black);
 }
 .game-card:hover {
-    border: 1.5px solid #d87272;
-    box-shadow: 2px 2px 4px #d8a0a082;
+    border: 1.5px solid var(--color-hover-border);
+    box-shadow: 2px 2px 4px var(--color-hover-border-shadow);
 }
 
 
@@ -88,6 +102,7 @@ main {
     width: 80%;
 }
 
+/* ////////GAME AND NEWS PAGES//////// */
 .news-game-wrapper {
     display: flex;
     flex-direction: column;
@@ -97,12 +112,11 @@ main {
     width: 80%;
     max-width: 85ch;
 }
-
 .game-card, .news-card {
     margin-top: 1.5rem;
     text-align: left;
-    border: 1.5px solid #d872726e;
-    box-shadow: 1px 1px 4px #d8a0a04e;
+    border: 1.5px solid var(--color-border);
+    box-shadow: 1px 1px 4px var(--color-border-shadow);
     padding: 1rem;
     transition: box-shadow 0.1s;
     transition-timing-function: ease-in;
@@ -116,7 +130,7 @@ main {
 .game-status {
     margin: 0;
     font-size: 0.9rem;
-    color:#424141;
+    color:var(--color-grey);
     font-style: italic;
 }
 
@@ -128,42 +142,24 @@ main {
     width: 100%;
 }
 
-/* make this only desktop and make it mobile like 2 rows */
-.team-grid {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 1rem;
-    padding: 0 1rem 0 1rem;
+.game-video {
+    width: 100%;
 }
-.team-member {
-    background-color: #dcdcdc;
-    font-size: 1rem;
-    padding: 1rem;
-    width: 38cqw;
-}
-.team-member-text {
-    margin: 0;
-}
-.team-member-role {
-    font-size: 0.8rem;
-    color:#555454;
-    margin: 0;
-}
-.team-image {
-    width: 80%;
-}
+
 .game-image {
+    height: 100%;
     width: 100%;
 }
 
 .assets-images-wrapper {
     width: 100%;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
+    flex-wrap: wrap;
     margin-bottom: 1rem;
      img {
-        width: 16cqw;
+        width: 25cqw;
+        max-width: 30%;
      }
 }
 
@@ -173,41 +169,84 @@ main {
     object-fit: cover;
 }
 
+.buttons-wrapper { /* for the play and survey buttons */
+    display: flex;
+    gap: 2rem;
+}
+
+
+/* ////////ABOUT//////// */
+.team-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+    padding: 0 1rem 0 1rem;
+}
+.team-member {
+    background-color: var(--color-light-grey);;
+    font-size: 1rem;
+    padding: 1rem;
+    width: 38cqw;
+}
+.team-member-text {
+    margin: 0;
+}
+.team-member-role {
+    font-size: 0.8rem;
+    color: var(--color-grey);
+    margin: 0;
+}
+.team-image {
+    width: 80%;
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.light-text {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: var(--color-hover-border);
+    font-size: 0.8rem;
+}
+
+/* ////////BUTTONS//////// */
+
 button {
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
      border: none;
      padding: 0.5rem 1rem 0.5rem 1rem;
-     background-color:#555454;
-     color:white;
+     background-color:var(--color-grey);
+     color:var(--color-white);
      transition: background-color 0.3s;
      font-size: 1rem;
+     border-radius: 2px;
 }
 
 button:hover{
-    background-color:#d6d6d6;
+    background-color:var(--color-light-grey);
     cursor: pointer;
 }
 
 .back-button {
      margin: 1rem;
      padding: 0.5rem 1rem 0.5rem 1rem;
-     background-color:#555454;
-     color:white;
-}
-
-.buttons-wrapper {
-    display: flex;
-    gap: 2rem;
+     background-color:var(--color-grey);
+     color:var(--color-white);;
 }
 
 .link-button {
+    font-size: 0.8rem;
     padding: 1rem 1.5rem 1rem 1.5rem;
-    background-color: #cf3636;
+    background-color: var(--color-red);
 }
 .link-button:hover {
-    background-color:#f87f7f;
+    background-color: var(--color-hover-red);
 }
-.text-heavy-page {
+
+.text-heavy-page { /* This class makes text left-aligned, I put it on pages with more text to make it easier to read.*/
     align-self: center;
     max-width: 80ch;
     gap: 1rem;
@@ -218,13 +257,7 @@ button:hover{
     }
 }
 
-/* .about-us-wrapper {
-    text-align: start;
-    p {
-        align-self: start;
-    } 
-} */
-
+/* ////////MEDIA QUERIES FOR RESIZING//////// */
 @media screen and (min-width: 700px) {
     .main-image {
         width: 60%;
@@ -234,7 +267,7 @@ button:hover{
         padding: 0 2rem 0 2rem;
     }
     .team-member {
-        background-color: #dcdcdc;
+        background-color: var(--color-light-grey);;
         font-size: 1rem;
         padding: 1rem;
         width: 25cqw;
@@ -245,6 +278,11 @@ button:hover{
     .news-game-wrapper {
         width: 70%;
     }
+
+    .link-button {
+        font-size: 1rem;
+    }
+
 }
 
 @media screen and (min-width: 1280px) {
@@ -263,7 +301,6 @@ button:hover{
         width: 60%;
         max-width: 65ch;
         gap: 0rem;
-        
     }
     .link-button {
         font-size: 1.5rem;
